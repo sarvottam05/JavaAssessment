@@ -36,7 +36,7 @@ public class LocationGateway implements LocationResolver {
     		return location;
     	}
     }
-    throw new NoSuchElementException("Location not found for identifier: " + identifier);
+    throw new IllegalArgumentException("Location not found for identifier: " + identifier);
     //throw new UnsupportedOperationException("Unimplemented method 'resolveByIdentifier'");
   }
 }
