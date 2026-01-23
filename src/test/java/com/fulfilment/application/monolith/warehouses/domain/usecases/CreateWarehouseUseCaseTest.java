@@ -19,8 +19,8 @@ public class CreateWarehouseUseCaseTest {
 	  @Test
 	  void shouldCreateWarehouseSuccessfully() {
 	    Warehouse w = new Warehouse();
-	    w.businessUnitCode = "";
-	    w.location = "";
+	    w.businessUnitCode = "WH-TEST-1";
+	    w.location = "Bangalore";
 	    w.capacity = 0;
 	    w.stock = 0 ;
 

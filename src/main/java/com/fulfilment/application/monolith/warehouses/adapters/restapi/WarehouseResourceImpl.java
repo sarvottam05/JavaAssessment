@@ -25,7 +25,6 @@ public class WarehouseResourceImpl implements WarehouseResource {
 	@Inject
 	private ReplaceWarehouseOperation replaceWarehouse;
 
-	
 	@Override
 	public List<Warehouse> listAllWarehousesUnits() {
 		return warehouseRepository.getAll().stream().map(this::toWarehouseResponse).toList();
@@ -36,9 +35,6 @@ public class WarehouseResourceImpl implements WarehouseResource {
 		com.fulfilment.application.monolith.warehouses.domain.models.Warehouse domain = toDomain(data);
 		createWarehouse.create(domain);
 		return toWarehouseResponse(domain);
-		// TODO Auto-generated method stub
-		// throw new UnsupportedOperationException("Unimplemented method
-		// 'createANewWarehouseUnit'");
 	}
 
 	@Override
@@ -49,9 +45,7 @@ public class WarehouseResourceImpl implements WarehouseResource {
 
 		}
 		return toWarehouseResponse(warehouse);
-		// TODO Auto-generated method stub
-		// throw new UnsupportedOperationException("Unimplemented method
-		// 'getAWarehouseUnitByID'");
+
 	}
 
 	@Override
@@ -61,9 +55,7 @@ public class WarehouseResourceImpl implements WarehouseResource {
 			throw new NotFoundException("WAREHOUSE_NOT_FOUND: " + id);
 		}
 		archiveWarehouse.archive(warehouse);
-		// TODO Auto-generated method stub
-		// throw new UnsupportedOperationException("Unimplemented method
-		// 'archiveAWarehouseUnitByID'");
+
 	}
 
 	@Override
